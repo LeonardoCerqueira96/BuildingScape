@@ -39,4 +39,16 @@ private:
 
 	// Called when grab key is released
 	void Release();
+
+	// Find attached physics handle component
+	void FindPhysicsHandleComponent();
+
+	// Find and setup attached (assumed) input component
+	void SetupInputComponent();
+
+	// Return hit for physics body in reach
+	FHitResult GetFirstPhysicsBodyInReach() const;
+
+	// Calculate and return line trace stard and end points
+	FTwoVectors GetLineTracePoints() const;
 };
